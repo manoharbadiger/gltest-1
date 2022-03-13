@@ -16,12 +16,15 @@ public class EmployeeGenerateEmail {
         for(Employee e: employeeList){
             if(e.getDepartName().equalsIgnoreCase("Technical")){
                 e.setEmailAddress(e.getFirstName()+"."+e.getLastName()+"@"+"tech.abc.com");
+                e.setPassWord(CredentialService.getPasswordString());
             }
             if(e.getDepartName().equalsIgnoreCase("Admin")){
                 e.setEmailAddress(e.getFirstName()+"."+e.getLastName()+"@"+"admin.abc.com");
+                e.setPassWord(CredentialService.getPasswordString());
             }
             if(e.getDepartName().equalsIgnoreCase("legal")){
                 e.setEmailAddress(e.getFirstName()+"."+e.getLastName()+"@"+"legal.abc.com");
+                e.setPassWord(CredentialService.getPasswordString());
             }
         }
         return employeeList;

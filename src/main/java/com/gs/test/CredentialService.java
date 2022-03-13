@@ -4,19 +4,15 @@ import java.util.Random;
 
 public class CredentialService {
 
-    public static String getSaltString() {
-        String SALTCHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890$#@!";
+    public static String getPasswordString() {
+        String PASSWORDCHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890$#@!";
         StringBuilder salt = new StringBuilder();
         Random rnd = new Random();
         while (salt.length() < 10) {
-            int index = (int) (rnd.nextFloat() * SALTCHARS.length());
-            salt.append(SALTCHARS.charAt(index));
+            int index = (int) (rnd.nextFloat() * PASSWORDCHARS.length());
+            salt.append(PASSWORDCHARS.charAt(index));
         }
-        String saltStr = salt.toString();
-        return saltStr;
-    }
-
-    public static void main(String[] args) {
-        System.out.println(getSaltString());
+        String password = salt.toString();
+        return password;
     }
 }

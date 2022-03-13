@@ -6,13 +6,22 @@ public class Employee {
     private String lastName;
     private String departName;
     private String emailAddress;
-
+    private String passWord;
 
 
     public Employee(String firstName, String lastName, String departName) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.departName = departName;
+    }
+
+
+    public String getPassWord() {
+        return passWord;
+    }
+
+    public void setPassWord(String passWord) {
+        this.passWord = passWord;
     }
 
     public String getEmailAddress() {
@@ -54,6 +63,7 @@ public class Employee {
                 ", lastName='" + lastName + '\'' +
                 ", departName='" + departName + '\'' +
                 ", emailAddress='" + emailAddress + '\'' +
+                ", passWord='" + passWord + '\'' +
                 '}';
     }
 }
